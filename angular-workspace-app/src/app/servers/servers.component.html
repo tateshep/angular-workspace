@@ -1,0 +1,50 @@
+<label>Server Name</label>
+<!-- <input
+  type="text"
+  class="form-control"
+  (input)="onUpdateServerName($event)"> -->
+
+<input
+type="text"
+class="form-control"
+[(ngModel)]="serverName">
+<br>
+
+<!-- <p>{{serverName}}</p> -->
+<button class="btn btn-primary"
+[disabled]="!allowNewServer"
+(click)="onCreateServer()">Add Server</button>
+<br>
+<!-- <p [innerText]="allowNewServer"></p>-->
+<p>{{serverCreationStatus}} </p>
+<br>
+
+<app-server></app-server>
+
+
+<input type="text"
+  class="form-control"
+  [(ngModel)]="userName"
+>
+<p>{{userName}}</p>
+
+<button class="btn btn-primary"
+[disabled]="!allowUserReset"
+(click)="resetUser()"
+>
+Reset User
+</button>
+<!-- ASSSIGMENT 2
+
+1. Add a Input field which updates a property("username") via Two-Way Binding
+2. Output the username property via String Interpolation (in a paragraph below the input)
+3. Add a button which may only be clicked if the username is not an empty string
+4. Upon clicking the button, the username should be reset to an empty string.ngForm
+
+Stuck getting the reset button to work. Right now my allowUserReset button is in the constructor function which I believe may be incorrect.
+I will try putting the logic in a different function that runs somehow with every keystroke to check for empty string.ngForm
+
+No idea how a "beginner" could do this taske in 8 min.... I'm already approaching 30 min
+
+
+-->

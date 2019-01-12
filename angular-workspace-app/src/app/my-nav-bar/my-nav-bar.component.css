@@ -1,0 +1,21 @@
+.myNavBarDiv {
+  /*border-bottom:solid 1px #008197;*/
+  padding:10px;
+  margin-bottom:20px;
+  box-shadow: 0px 5px 30px -10px black;
+}
+
+.myNavBar {
+  margin:0px;
+  margin:10px;
+}
+
+.myHeader {
+  padding-right: 4px;
+  display:inline-block;
+}
+
+.myHeader:hover {
+  color:rgba(172, 255, 47, 0.50);
+  transition: 500ms;
+}
