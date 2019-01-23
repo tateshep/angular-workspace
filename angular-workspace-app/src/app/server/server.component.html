@@ -1,1 +1,6 @@
-<p>Server IP  {{ serverId }} is {{ getServerStatus() }}</p>
+<p [ngStyle]='{backgroundColor: getColor()}'
+[ngClass]="{online:serverStatus === 'online'}">
+  Server IP  {{ serverId }} is {{ getServerStatus() }}
+</p>
+
+<!-- square brackets indicate binding to a property of a directive -->

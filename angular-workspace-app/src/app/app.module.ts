@@ -9,6 +9,7 @@ import { ServersComponent } from './servers/servers.component';
 import { SuccessComponent } from './success/success.component';
 import { WarningComponent } from './warning/warning.component';
 import { MyNavBarComponent } from './my-nav-bar/my-nav-bar.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MyNavBarComponent } from './my-nav-bar/my-nav-bar.component';
     ServersComponent,
     SuccessComponent,
     WarningComponent,
-    MyNavBarComponent
+    MyNavBarComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
