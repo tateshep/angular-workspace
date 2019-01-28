@@ -44,6 +44,7 @@ export class ServerElementComponent implements
    ngOnChanges(changes: SimpleChanges) {
     console.log('ngOnChanges called');
     console.log(changes);
+    /* Called after a bound input property changes */
 
    }
 
@@ -51,30 +52,45 @@ export class ServerElementComponent implements
     console.log('ngOnInit called');
     console.log('Text Content:' + this.header.nativeElement.textContent);
     console.log('Text Contnet of paragraph' + this.paragraph.nativeElement.textContent);
+        /* Called once the component is initialized */
+
   }
 
   ngDoCheck() {
     console.log('ngDoCheck called');
+        /* Called during every chane detection run */
+
   }
 
   ngAfterContentInit() {
     console.log('ngAfterContentInit called');
     console.log('Text Contnet of paragraph' + this.paragraph.nativeElement.textContent);
+      /* Called after content (ng-content) has been projected into view */
+
 
   }
   ngAfterContentChecked() {
     console.log('ngAfterContentChecked called');
+        /* Called every time the projected content has been checked */
+
   }
 
   ngAfterViewInit() {
     console.log('ngAfterViewInit called');
     console.log('Text Content:' + this.header.nativeElement.textContent);
+      /* Called after the components view (and child viewa ) has been intialized */
+
 
   }
   ngAfterViewChecked() {
     console.log('ngAfterViewChecked called');
+        /* Called every time the view ( and child views ) have been checked */
+
   }
   ngOnDestroy() {
     console.log('ngOnDestroy');
+
+        /* Called once the component is about to be destroyed */
+
   }
 }
