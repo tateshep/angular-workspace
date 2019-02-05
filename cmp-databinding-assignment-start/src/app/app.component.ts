@@ -6,4 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  myEvents = [{event: 'Zero', value: 0}];
+
+
+  onEventStart(eventData: {event: string, value: number}) {
+    this.myEvents.push({
+        event: eventData.event,
+        value: eventData.value
+      }
+    );
+  }
 }

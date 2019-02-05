@@ -16,12 +16,40 @@
   </div>
   <div class="row">
     <app-game-control
+    (eventStart)="onEventStart($event)"
 
-    ><!--
-     *ngFor="let event of events"
-    [events]="events"
-{{ GameControlComponent.events.value }}
+    ></app-game-control>
 
-    --></app-game-control>
   </div>
+    <div class="row">
+      <div class="col-xs-6">
+        <app-odd
+        *ngFor="let oddEvent of myEvents"
+        [oddEvent]="oddEvent">
+        <p>
+        <strong *ngIf="oddEvent.event === 'Odd Number'" class="alert alert-info">{{ oddEvent.event }} {{ oddEvent.value }}</strong>
+        </p>
+        </app-odd>
+      </div>
+      <div class="col-xs-6">
+          <app-even
+          *ngFor="let evenEvent of myEvents"
+          [evenEvent] = "evenEvent">
+          <p>
+          <strong *ngIf="evenEvent.event === 'Even Number'" class="alert alert-success">{{ evenEvent.event }} {{ evenEvent.value }}</strong>
+          </p>
+          </app-even>
+        </div>
+    </div>
 </div>
+
+
+
+<!--
+*ngFor="let serverElement of serverElements"
+  [srvElement]="serverElement">
+  <p>
+    <strong *ngIf="serverElement.type === 'server'" style="color: red">{{ serverElement.content }}</strong>
+    <em *ngIf="serverElement.type === 'blueprint'">{{ serverElement.content }}</em>
+  </p>
+ -->
